@@ -1,0 +1,8 @@
+C:\Users\Johan De Kock\source\repos\Chatting\Shared\bin\Debug\netstandard2.1\Chatting.Shared.deps.json
+C:\Users\Johan De Kock\source\repos\Chatting\Shared\bin\Debug\netstandard2.1\Chatting.Shared.dll
+C:\Users\Johan De Kock\source\repos\Chatting\Shared\bin\Debug\netstandard2.1\Chatting.Shared.pdb
+C:\Users\Johan De Kock\source\repos\Chatting\Shared\obj\Debug\netstandard2.1\Chatting.Shared.AssemblyInfoInputs.cache
+C:\Users\Johan De Kock\source\repos\Chatting\Shared\obj\Debug\netstandard2.1\Chatting.Shared.AssemblyInfo.cs
+C:\Users\Johan De Kock\source\repos\Chatting\Shared\obj\Debug\netstandard2.1\Chatting.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Johan De Kock\source\repos\Chatting\Shared\obj\Debug\netstandard2.1\Chatting.Shared.dll
+C:\Users\Johan De Kock\source\repos\Chatting\Shared\obj\Debug\netstandard2.1\Chatting.Shared.pdb

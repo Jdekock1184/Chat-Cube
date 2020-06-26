@@ -1,0 +1,80 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+
+
+<h1>Registration</h1>
+
+<div>
+    <input @bind="name" placeholder="Name"/>
+    <input @bind="surname" placeholder="Surname"/>
+    <br />
+    <br />
+    <input @bind="username" placeholder="Username"/>
+    <br />
+    <br />
+    <button type="button" class="btn btn-primary" @onclick="setsessionStorage">Submit</button>
+</div>
+
+
+
+@code {
+
+        //public async void UpdateLocalStorage()
+        //{
+        //    await SessionStore.SetItemAsync("Name", Name);
+        //    await SessionStore.SetItemAsync("Surname", Surname);
+        //    await SessionStore.SetItemAsync("Username", Username);
+        //}
+
+        public void Chat()
+        {
+
+            NavigationManager.NavigateTo("/chat");
+
+
+        }
+
+
+
+    public string name { get; set; }
+    public string surname { get; set; }
+    public string username { get; set; }
+    private string tempname;
+    private string tempusername;
+
+    public async Task setsessionStorage()
+    {
+
+
+        await JSRuntime.InvokeVoidAsync("setItem", name, surname, username);
+
+
+        tempname = ((IJSInProcessRuntime)JSRuntime).Invoke<string>("getItem", nameof(name));
+        tempusername = ((IJSInProcessRuntime)JSRuntime).Invoke<string>("getItem", nameof(username));
+
+        int namelen = name.Length;
+        int usernamelen = username.Length;
+
+        /*while (namelen < 0 && usernamelen < 0)
+        {
+            Console.WriteLine("Please fill in all required fields.");
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/chat");
+        }
+        */
+        NavigationManager.NavigateTo("/chat");
+    }
+
+    public string getsessionStorage()
+    {
+
+        return ((IJSInProcessRuntime)JSRuntime).Invoke<string>("Reg.getItemname", nameof(username));
+
+    }
+
+
+}
+

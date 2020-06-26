@@ -1,0 +1,221 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Server\\Chatting.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Client\\Chatting.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Client\\Chatting.Client.csproj",
+        "projectName": "Chatting.Client",
+        "projectPath": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Client\\Chatting.Client.csproj",
+        "packagesPath": "C:\\Users\\Johan De Kock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Johan De Kock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Shared\\Chatting.Shared.csproj": {
+                "projectPath": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Shared\\Chatting.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Blazored.SessionStorage": {
+              "target": "Package",
+              "version": "[1.0.12, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Build": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400-preview-015151\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Server\\Chatting.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Server\\Chatting.Server.csproj",
+        "projectName": "Chatting.Server",
+        "projectPath": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Server\\Chatting.Server.csproj",
+        "packagesPath": "C:\\Users\\Johan De Kock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Johan De Kock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Client\\Chatting.Client.csproj": {
+                "projectPath": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Client\\Chatting.Client.csproj"
+              },
+              "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Shared\\Chatting.Shared.csproj": {
+                "projectPath": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Shared\\Chatting.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[3.2.0-preview5.20216.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400-preview-015151\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Shared\\Chatting.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Shared\\Chatting.Shared.csproj",
+        "projectName": "Chatting.Shared",
+        "projectPath": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Shared\\Chatting.Shared.csproj",
+        "packagesPath": "C:\\Users\\Johan De Kock\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Johan De Kock\\source\\repos\\Chatting\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Johan De Kock\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400-preview-015151\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

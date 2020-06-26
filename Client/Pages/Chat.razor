@@ -1,0 +1,75 @@
+﻿@page "/chat"
+@using Microsoft.AspNetCore.SignalR.Client
+@inject NavigationManager NavigationManager
+@implements IDisposable
+@inject IJSRuntime JSRuntime
+
+
+
+<div class="form-group, footer">
+    <label>
+        Message:
+        <input @bind="messageInput" size="50" placeholder="type your message here..." /><button @onclick="Send" disabled="@(!IsConnected)" >Send</button>
+    </label>
+</div>
+
+<hr>
+
+<ul id="messagesList">
+    @foreach (var message in messages)
+    {
+        <li class="bubble">@message</li>
+    }
+</ul>
+
+
+
+@code {
+    private HubConnection hubConnection;
+    private List<string> messages = new List<string>();
+
+    private string messageInput;
+
+    private string Username;
+
+    public async Task get()
+    {
+
+        ((IJSInProcessRuntime)JSRuntime).Invoke<string>("getItem", nameof(Username));
+
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        Username = ((IJSInProcessRuntime)JSRuntime).Invoke<string>("getItem", nameof(Username));
+        hubConnection = new HubConnectionBuilder()
+        .WithUrl(NavigationManager.ToAbsoluteUri("/chathub"))
+        .Build();
+
+        hubConnection.On<string, string>
+    ("ReceiveMessage", (userInput, messageInput) =>
+    {
+        var encodedMsg = $"{userInput}: {messageInput}";
+        messages.Add(encodedMsg);
+        StateHasChanged();
+    });
+
+        await hubConnection.StartAsync();
+    }
+
+    Task Send() =>
+    hubConnection.SendAsync("SendMessage", Username, messageInput);
+    
+
+    public bool IsConnected =>
+    hubConnection.State == HubConnectionState.Connected;
+
+    public void Dispose()
+    {
+        _ = hubConnection.DisposeAsync();
+    }
+
+}
+
+
